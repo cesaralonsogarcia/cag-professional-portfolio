@@ -1,0 +1,70 @@
+/* Variables definition */
+:root {
+    --default-padding: 25px;
+}
+
+/* Universal selector */
+* {
+    font-family: Tahoma, sans-serif;
+}
+
+/* Element selectors */
+header h1 {
+    display: inline-block;
+    padding: var(--default-padding);
+}
+
+nav {
+    float: right;
+    padding: var(--default-padding);
+}
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+figure img {
+    margin-bottom: 25px;
+}
+
+main {
+    padding: var(--default-padding);
+}
+
+footer {
+    padding: var(--default-padding);
+}
+
+/* Class selectors */
+.work {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.project-row-1, .project-row-2 {
+    flex-basis: 33.3%;
+    
+}
+
+/* ID selectors */
+#aboutme, #work {
+    padding: 15px 0;
+}
+
+#aboutme {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#project-1 {
+    flex-basis: 100%;
+}

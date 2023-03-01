@@ -32,39 +32,80 @@ nav ul li a {
 }
 
 figure img {
+    padding: var(--default-padding);
     margin-bottom: 25px;
 }
 
-main {
-    padding: var(--default-padding);
-}
-
-footer {
-    padding: var(--default-padding);
-}
-
 /* Class selectors */
-.work {
+.aboutme, .work, .contact {
     display: flex;
     flex-wrap: wrap;
+    padding: 0 5px;
 }
 
 .project-row-1, .project-row-2 {
-    flex-basis: 33.3%;
-    
+    flex-basis: 33%;
+    margin: 10px 0;
+}
+
+.info {
+    flex-basis: 25%;
+    margin: 10px 0;
+    text-align: center;
 }
 
 /* ID selectors */
-#aboutme, #work {
-    padding: 15px 0;
+#aboutme, #work, #contact {
+    padding: var(--default-padding);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
 }
 
-#aboutme {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+#aboutme h2, #work h2, #contact h2 {
+    flex-basis: 10%;
+    border-right: solid 2px black;
+}
+
+#aboutme .aboutme, #work .work, #contact .contact {
+    flex-grow: 9;
+    justify-content: space-between;
 }
 
 #project-1 {
     flex-basis: 100%;
+    margin: 10px 0;
+}
+
+/* Hidden information displayed on hovering */
+#phone:hover::after {
+    display: block;
+    content: "(915) 873-1327";
+    color: black;
+    border: dotted 2px black;
+    padding: 5px;
+}
+
+#email:hover::after {
+    display: block;
+    content: "cesarg324@gmail.com";
+    color: black;
+    border: dotted 2px black;
+    padding: 5px;
+}
+
+#linkedin:hover::after {
+    display: block;
+    content: "@cesaralonsogarcia";
+    color: black;
+    border: dotted 2px black;
+    padding: 5px;
+}
+
+#github:hover::after {
+    display: block;
+    content: "@cesaralonsogarcia";
+    color: black;
+    border: dotted 2px black;
+    padding: 5px;
 }

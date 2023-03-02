@@ -1,22 +1,30 @@
 /* Variables definition */
 :root {
     --default-padding: 25px;
+    --background-color: #2886c5;
+    --background-text: #dddcdc;
 }
 
 /* Universal selector */
 * {
-    font-family: Tahoma, sans-serif;
+    font-family: Calibri, sans-serif;
 }
 
 /* Element selectors */
+header {
+    background-color: var(--background-color);
+    color: var(--background-text);
+}
 header h1 {
     display: inline-block;
     padding: var(--default-padding);
+    font-size: 30px;
 }
 
 nav {
     float: right;
     padding: var(--default-padding);
+    margin-top: 15px;
 }
 nav ul {
     list-style: none;
@@ -29,17 +37,13 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-}
-
-figure img {
-    padding: var(--default-padding);
-    margin-bottom: 25px;
+    color: #fff;
 }
 
 /* Class selectors */
 .aboutme, .work, .contact {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     padding: 0 5px;
 }
 
@@ -55,26 +59,64 @@ figure img {
 }
 
 /* ID selectors */
+#figure {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+#background {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: var(--default-padding);
+    margin-bottom: 25px;
+    width: 100%;
+    height: 100%;
+}
+
+#profile-photo {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 25%;
+    height: 40%;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+#standout {
+    color: #2e4453;
+}
+
 #aboutme, #work, #contact {
     padding: var(--default-padding);
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
 }
 
 #aboutme h2, #work h2, #contact h2 {
     flex-basis: 10%;
     border-right: solid 2px black;
+    background-color: var(--background-color);
+    color: var(--background-text);
+    padding: 5px;
+    text-align: center;
 }
 
 #aboutme .aboutme, #work .work, #contact .contact {
-    flex-grow: 9;
+    flex-basis: 90%;
     justify-content: space-between;
+    padding: 5px;
 }
 
 #project-1 {
     flex-basis: 100%;
     margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+#paragraph {
+    flex-basis: 100%;
 }
 
 /* Hidden information displayed on hovering */
@@ -108,4 +150,41 @@ figure img {
     color: black;
     border: dotted 2px black;
     padding: 5px;
+}
+
+/* Page Layout for Smartphones */
+@media screen and (max-width: 768px) {
+    nav {
+        float: none;
+        padding: 0 25px;
+    }
+    
+    /* Display the section title above the content */
+    #aboutme h2, #work h2, #contact h2 {
+        flex-basis: 100%;
+        border: none;
+    }
+
+    /* Show only two projects per line */
+    .project-row-1, .project-row-2 {
+        flex-basis: 50%;
+        margin: 10px 0;
+    }
+    
+    /* Disable hover action for smaller screens */
+    #phone:hover::after {
+        display: none;
+    }
+    
+    #email:hover::after {
+        display: none;
+    }
+    
+    #linkedin:hover::after {
+        display: none;
+    }
+    
+    #github:hover::after {
+        display: none;
+    }
 }

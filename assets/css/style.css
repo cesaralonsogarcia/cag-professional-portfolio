@@ -1,61 +1,109 @@
 /* Variables definition */
 :root {
     --default-padding: 25px;
-    --background-color: #2886c5;
+    --background-color-menu: #2886c5;
+    --background-color: #2e4453;
+    --background-section: #dddcdc;
     --background-text: #dddcdc;
 }
 
 /* Universal selector */
 * {
     font-family: Calibri, sans-serif;
+    background-color: var(--background-color);
 }
 
 /* Element selectors */
 header {
-    background-color: var(--background-color);
+    background-color: var(--background-color-menu);
     color: var(--background-text);
 }
 header h1 {
+    background-color: var(--background-color-menu);
     display: inline-block;
     padding: var(--default-padding);
     font-size: 30px;
 }
 
 nav {
+    background-color: var(--background-color-menu);
     float: right;
     padding: var(--default-padding);
     margin-top: 15px;
 }
 nav ul {
+    background-color: var(--background-color-menu);
     list-style: none;
 }
 
 nav ul li {
+    background-color: var(--background-color-menu);
     display: inline-block;
     padding: 0 10px;
 }
 
 nav ul li a {
+    background-color: var(--background-color-menu);
     text-decoration: none;
     color: #fff;
 }
 
 /* Class selectors */
 .aboutme, .work, .contact {
+    background-color: var(--background-section);
     display: flex;
     flex-flow: row wrap;
     padding: 0 5px;
 }
 
+.background {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: var(--default-padding);
+    width: 100%;
+    height: 100%;
+}
+
+.paragraph {
+    line-height: 1.5;
+    margin: 10px 15px;
+    font-size: 18px;
+    text-align: justify;
+    background-color: var(--background-section);
+}
+
+.project1 {
+    background-color: var(--background-section);
+    position: absolute;
+}
+
 .project-row-1, .project-row-2 {
+    background-color: var(--background-section);
     flex-basis: 33%;
-    margin: 10px 0;
+    padding: 15px;
+}
+
+.title {
+    background-color: var(--background-color);
+    position: absolute;
+    width: 25%;
+    height: 10%;
+    bottom: 40px;
+    left: 40px;
 }
 
 .info {
+    text-decoration: none;
+    color: black;
+    background-color: var(--background-section);
     flex-basis: 25%;
     margin: 10px 0;
     text-align: center;
+}
+
+.work {
+    position: relative;
 }
 
 /* ID selectors */
@@ -69,7 +117,6 @@ nav ul li a {
     top: 0;
     left: 0;
     padding: var(--default-padding);
-    margin-bottom: 25px;
     width: 100%;
     height: 100%;
 }
@@ -85,6 +132,7 @@ nav ul li a {
 }
 
 #standout {
+    background-color: var(--background-color-menu);
     color: #2e4453;
 }
 
@@ -95,28 +143,46 @@ nav ul li a {
 }
 
 #aboutme h2, #work h2, #contact h2 {
-    flex-basis: 10%;
-    border-right: solid 2px black;
-    background-color: var(--background-color);
+    flex-basis: 15%;
+    border-right: solid 10px darkgray;
+    background-color: var(--background-color-menu);
     color: var(--background-text);
-    padding: 5px;
+    padding: 25px 5px;
     text-align: center;
+    font-size: 24px;
 }
 
 #aboutme .aboutme, #work .work, #contact .contact {
-    flex-basis: 90%;
+    background-color: var(--background-section);
+    flex-basis: 85%;
     justify-content: space-between;
     padding: 5px;
 }
 
 #project-1 {
+    background-color: var(--background-section);
     flex-basis: 100%;
-    margin: 10px 0;
+    padding: 15px;
     flex-wrap: wrap;
+    position: relative;
+    top: 0;
+    left: 0;
 }
 
-#paragraph {
-    flex-basis: 100%;
+#project-1 h3 {
+    bottom: 30px;
+    left: 0px;
+    background-color: var(--background-color);
+    color: var(--background-text);
+    font-size: 20px;
+}
+
+#project-1 p {
+    bottom: 5px;
+    left: 0px;
+    background-color: var(--background-color);
+    color: var(--background-text);
+    font-size: 16px;
 }
 
 /* Hidden information displayed on hovering */

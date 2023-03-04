@@ -22,7 +22,7 @@ header h1 {
     background-color: var(--background-color-menu);
     display: inline-block;
     padding: var(--default-padding);
-    font-size: 40px;
+    font-size: 35px;
 }
 
 nav {
@@ -40,20 +40,21 @@ nav ul {
 nav ul li {
     background-color: var(--background-color-menu);
     display: inline-block;
-    padding: 0 10px;
+    padding: 0 5px;
 }
 
 nav ul li a {
     background-color: var(--background-color-menu);
     text-decoration: none;
     color: #fff;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 /* Class selectors */
 .aboutme, .work, .contact {
     background-color: var(--background-section);
     display: flex;
+    flex-basis: 85%;
     flex-flow: row wrap;
     padding: 0 5px;
 }
@@ -97,8 +98,8 @@ nav ul li a {
 .title {
     background-color: var(--background-color);
     position: absolute;
-    width: 25%;
-    height: 10%;
+    width: 200px;
+    height: 60px;
     bottom: 25px;
     left: 25px;
 }
@@ -106,36 +107,46 @@ nav ul li a {
 .title-small {
     background-color: var(--background-color);
     position: absolute;
-    width: 82%;
-    height: 13%;
-    bottom: 25px;
-    left: 25px;
-    padding-top: 5px;
+    width: calc(100% - 30px);
+    height: 50px;
+    bottom: 15px;
+    left: 15px;
+    padding: 5px;
 }
 
-.title h3, .title-small h3 {
+.title h3 {
     position: absolute;
-    bottom: 15px;
-    left: 0px;
+    bottom: 30px;
+    left: 5px;
     background-color: var(--background-color);
     color: var(--background-text);
     font-size: 20px;
 }
 
-.title p, .title-small p {
+.title p {
     position: absolute;
-    bottom: 0px;
-    left: 0px;
+    bottom: 5px;
+    left: 5px;
     background-color: var(--background-color);
     color: var(--background-text);
     font-size: 16px;
 }
 
 .title-small h3 {
+    position: absolute;
+    bottom: 25px;
+    left: 10px;
+    background-color: var(--background-color);
+    color: var(--background-text);
     font-size: 16px;
 }
 
 .title-small p {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: var(--background-color);
+    color: var(--background-text);
     font-size: 12px;
 }
 
@@ -187,7 +198,7 @@ nav ul li a {
     color: var(--background-text);
     padding: 25px 5px;
     text-align: center;
-    font-size: 25px;
+    font-size: 24px;
 }
 
 #aboutme .aboutme, #work .work, #contact .contact {
@@ -208,61 +219,123 @@ nav ul li a {
 }
 
 /* Hidden information displayed on hovering */
-#phone:hover::after {
-    display: block;
-    content: "(915) 873-1327";
-    color: black;
-    border: dotted 2px black;
-    padding: 5px;
-}
+    #phone:hover::after {
+        display: block;
+        content: "(915) 873-1327";
+        color: black;
+        border: dotted 2px black;
+        padding: 5px;
+    }
 
-#email:hover::after {
-    display: block;
-    content: "cesarg324@gmail.com";
-    color: black;
-    border: dotted 2px black;
-    padding: 5px;
-}
+    #email:hover::after {
+        display: block;
+        content: "cesarg324@gmail.com";
+        color: black;
+        border: dotted 2px black;
+        padding: 5px;
+    }
 
-#linkedin:hover::after {
-    display: block;
-    content: "@cesaralonsogarcia";
-    color: black;
-    border: dotted 2px black;
-    padding: 5px;
-}
+    #linkedin:hover::after {
+        display: block;
+        content: "@cesaralonsogarcia";
+        color: black;
+        border: dotted 2px black;
+        padding: 5px;
+    }
 
-#github:hover::after {
-    display: block;
-    content: "@cesaralonsogarcia";
-    color: black;
-    border: dotted 2px black;
-    padding: 5px;
-}
+    #github:hover::after {
+        display: block;
+        content: "@cesaralonsogarcia";
+        color: black;
+        border: dotted 2px black;
+        padding: 5px;
+    }
 
-/* Page Layout for Smartphones */
-@media screen and (max-width: 450px) {
+
+/* Page layout for small Tablets */
+/*@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 30px;
+    }
+
+    nav {
+        padding: 0;
+        align-items: center;
+    }
+
+    nav ul li {
+        padding: 20px 0;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+        padding: 0 3px;
+    }
+
+    .title-small {
+        height: 40px;
+        left: 15px;
+    }
+    
+    .title h3 {
+        font-size: 16px;
+    }
+
+    .title p {
+        font-size: 14px;
+    }
+    
+    .title-small h3 {
+        padding-top: 3px;
+        font-size: 12px;
+    }
+
+    .title-small p {
+        font-size: 10px;
+    }
+
+    .paragraph {
+        font-size: 16px;
+    }
+
+    .info {
+        font-size: 16px;
+    }
+
+    #aboutme h2, #work h2, #contact h2 {
+        font-size: 18px;
+    }
+}*/
+
+/* Page Layout for Smartphones and tablets */
+@media screen and (max-width: 768px) {
     nav {
         float: none;
-        padding: 0 25px;
+        padding: 0;
+        border: 5px solid darkgray;
+        align-items: center;
     }
 
     header h1 {
         font-size: 30px;
         padding: 25px 25px 0 25px;
+        text-align: center;
     }
 
     nav ul {
         background-color: var(--background-color-menu);
         list-style: none;
+        padding: 0;
     }
     
     nav ul li {
-        padding: 10px 10px;
+        padding: 10px 0;
+        width: 24%;
+        text-align: center;
     }
 
     nav ul li a {
-        padding: 10px 2px;
+        padding: 5px 0;
         font-size: 14px;
         text-align: center;
     }
@@ -285,32 +358,39 @@ nav ul li a {
     }
 
     .title {
-        width: 22%;
-        height: 11%;
+        width: 83px;
+        height: 33px;
         bottom: 15px;
         left: 20px;
     }
-    
+
     .title-small {
-        width: 78%;
-        height: 10%;
-        bottom: 15px;
-        left: 20px;
+        height: 25px;
+        left: 10px;
     }
     
     .title h3 {
-        font-size: 16px;
-        bottom: 5px;
+        font-size: 18px;
+        bottom: 7px;
+        left: 0;
     }
     
     .title-small h3 {
-        bottom: 2px;
-        padding-top: 3px;
+        bottom: 5px;
+        padding-top: 5px;
         font-size: 12px;
     }
     
     .title p, .title-small p {
         display: none;
+    }
+
+    .contact {
+        margin-bottom: 10px;
+    }
+
+    .info {
+        padding: 10px 5px;
     }
     
     /* Display the section title above the content */
@@ -329,21 +409,39 @@ nav ul li a {
     #project-1 {
         padding: 10px;
     }
+}
 
-    /* Disable hover action for smaller screens */
- /*   #phone:hover::after {
-        display: none;
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 26px;
     }
-    
-    #email:hover::after {
-        display: none;
+
+    nav {
+        display: inline-block;
+        width: 100%;
+        height: 30px;
     }
-    
-    #linkedin:hover::after {
-        display: none;
+
+    nav ul {
+        width: 100%;
     }
-    
-    #github:hover::after {
-        display: none;
-    } */
+
+    nav ul li {
+        width: 23%;
+        padding: 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+        text-align: center;
+        padding: 0;
+    }
+    .title-small h3 {
+        font-size: 12px;
+    }
+
+    .info {
+        font-size: 14px;
+    }
 }

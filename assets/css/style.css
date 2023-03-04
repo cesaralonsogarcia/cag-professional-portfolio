@@ -251,62 +251,6 @@ nav ul li a {
         padding: 5px;
     }
 
-
-/* Page layout for small Tablets */
-/*@media screen and (max-width: 768px) {
-    header h1 {
-        font-size: 30px;
-    }
-
-    nav {
-        padding: 0;
-        align-items: center;
-    }
-
-    nav ul li {
-        padding: 20px 0;
-    }
-
-    nav ul li a {
-        font-size: 14px;
-        padding: 0 3px;
-    }
-
-    .title-small {
-        height: 40px;
-        left: 15px;
-    }
-    
-    .title h3 {
-        font-size: 16px;
-    }
-
-    .title p {
-        font-size: 14px;
-    }
-    
-    .title-small h3 {
-        padding-top: 3px;
-        font-size: 12px;
-    }
-
-    .title-small p {
-        font-size: 10px;
-    }
-
-    .paragraph {
-        font-size: 16px;
-    }
-
-    .info {
-        font-size: 16px;
-    }
-
-    #aboutme h2, #work h2, #contact h2 {
-        font-size: 18px;
-    }
-}*/
-
 /* Page Layout for Smartphones and tablets */
 @media screen and (max-width: 768px) {
     nav {

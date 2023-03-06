@@ -33,4 +33,16 @@ THEN I am presented with a responsive layout that adapts to my viewport
 
 ## Screenshot
 
-![Screenshot]()
+![Screenshot](https://github.com/cesaralonsogarcia/module-2-challenge/blob/main/assets/images/CAG-Portfolio-screenshot.png)
+
+## Deployed Application
+
+Click on the following link to access the deployed application:  
+https://cesaralonsogarcia.github.io/module-2-challenge/
+
+## Sources
+
+The following links were used as sources to complete this challenge:  
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/  
+https://blog.hubspot.com/website/html-telephone-link  
+https://www.w3schools.com/howto/howto_css_display_element_hover.asp  
